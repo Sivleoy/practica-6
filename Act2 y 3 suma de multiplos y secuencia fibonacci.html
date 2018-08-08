@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title> Multiplos y Secuencia Benitez</title>
+	<style>
+	 body {background-color: lightseagreen} 
+     h1{color:black; text-align:center;}
+     h2{color:black; text-align:center;}
+     .bt{color:green; text-align:center;}
+     p{font-size: xx-large;}
+     table, th{border:2px solid;}
+    </style>
+</head>
+<body>
+	<h1> HOLA USUARIO </h1>
+	<h1>En esta pantalla podra observar varios resultados de sumas de multiplos y secuancia fibonacci</h1>
+
+<table>
+	<th><h2> Suma De Los Multiplos De 5 Por Debajo De Mil </h2>
+	<center><button id="boton1" class="bt"> tocame </button></center>
+
+		<script>
+		var J,K,Y=0;
+		for (K=0; K<=1000; K++){ J= K%5;
+		if (J==0 & J<1000){ Y=K+Y;}}
+         var btt=document.querySelector("#boton1");
+ 			 btt.addEventListener ("click", respuesta1);
+ 			 function respuesta1() {alert (Y);}
+		</script></th>
+
+	<th><h2>Suma De Los Multiplos De 3 Por Debajo De Mil </h2>
+	<center><button id="boton2" class="bt"> tocame </button></center>
+		<script>
+		var Q,W,R=0;
+		for (W=0; W<=1000; W++){ Q= W%3;
+		if (Q==0 & Q<1000){ R=W+R;}}
+        var btt=document.querySelector("#boton2");
+ 			btt.addEventListener ("click", respuesta2);
+ 			function respuesta2() {alert (R);}
+     	</script></th>
+
+	<th><h2> Secuencia Fibonacci Impar Menor A 4 Millones </h2>
+	<center><button id="boton3" class="bt"> tocame </button></center>
+		<script>
+		var B=0,L=1,K=0, ST=0;
+		while(K<4000000) { K=B+L; B=L; L=K;
+		if((K%2)==1) { ST=ST+K;}}
+		var btt=document.querySelector("#boton3");
+ 			btt.addEventListener ("click", respuesta3);
+ 			function respuesta3() {alert (ST);}
+		</script></th>
+		</table>
+</body>
+</html>
